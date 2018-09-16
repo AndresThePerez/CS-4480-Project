@@ -1,0 +1,20 @@
+import javax.swing.JPanel;
+
+public class Tile extends JPanel {
+	int x, y;
+	boolean isWall = true;
+	boolean isMarked = false;
+
+	public Tile(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public void setWall(boolean isWall) {
+		this.isWall = isWall;
+	}
+
+	public void isMarked(boolean isMarked) {
+		this.isMarked = isMarked;
+	}
+}
