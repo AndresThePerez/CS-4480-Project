@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -12,23 +13,25 @@ public class Menu {
 
 	JFrame Menu = new JFrame("CS4480 Artificial Intelligence Maze Program");
 	JButton Start = new JButton("Begin");
-	ImageIcon picture = new ImageIcon("img/8-bit-Mario-Mushroom.jpg");
+	ImageIcon picture = new ImageIcon("Img/10.v1.png");
 	JLabel imageLabel = new JLabel(picture);
 
 	ArrayList<String> mapList = new ArrayList<String>();
-	JComboBox<String> lvlList;
+	static JComboBox<String> lvlList;
+	Font font1 = new Font("Verdana", Font.BOLD , 20);
 
-	int bWidth = 220;
-	int bHeight = 30;
-	int space = 430;
-	int WIDTH = 500;
-	int HEIGHT = 500;
+	int bWidth = 350;
+	int bHeight = 50;
+	int WIDTH = 750;
+	int HEIGHT = 750;
 
 	public Menu() {
 		mapList.add("Level 0.map");
-		mapList.add("level 1.map");
+		mapList.add("Level 1.map");
+		//mapList.add("Level 2.map");
 		lvlList = new JComboBox<String>(mapList.toArray(new String[mapList
 				.size()]));
+		lvlList.setFont(font1);
 
 		Menu.setResizable(false);
 		Menu.setSize(WIDTH, HEIGHT);
@@ -36,9 +39,11 @@ public class Menu {
 		Menu.setLocationRelativeTo(null);
 		Menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Menu.setVisible(true);
+		Menu.setFont(font1);
 
 		Start.setSize(bWidth, bHeight);
-		Start.setLocation(10, space);
+		Start.setLocation(10, 655);
+		Start.setFont(font1);
 		Menu.add(Start);
 		Start.addActionListener(new ActionListener() {
 			@Override
@@ -49,10 +54,10 @@ public class Menu {
 		});
 
 		lvlList.setSize(bWidth, bHeight);
-		lvlList.setLocation(260, space);
+		lvlList.setLocation(375, 655);
 		Menu.add(lvlList);
 
-		imageLabel.setBounds((WIDTH - 400) / 2, 25, 400, 400);
+		imageLabel.setBounds(25, 25, 700, 600);
 		imageLabel.setVisible(true);
 		Menu.add(imageLabel);
 	}
