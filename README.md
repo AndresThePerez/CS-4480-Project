@@ -1,2 +1,2 @@
 # CS-4480-Project
-This is my maze finding AI
+Pathfinding AI maze using bfs and dfs. Developed in Java by Andres Perez
