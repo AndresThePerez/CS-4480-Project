@@ -1,1 +1,0 @@
-This is an artificial intelligence program designed by Andres Perez
